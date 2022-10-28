@@ -4,37 +4,24 @@ importers:
 
   .:
     specifiers:
-      '@rollup/pluginutils': ^5.0.2
       '@sxzz/eslint-config': ^2.4.4
       '@types/node': '*'
       bumpp: ^8.2.1
       eslint: ^8.26.0
       eslint-define-config: ^1.8.0
-      fast-glob: ^3.2.12
-      magic-string: ^0.26.7
-      prettier: ^2.7.1
       tsup: ^6.3.0
       tsx: ^3.11.0
       typescript: ^4.8.4
-      unplugin: ^0.10.1
-      vite: ^3.1.8
       vitest: ^0.24.3
-    dependencies:
-      '@rollup/pluginutils': 5.0.2
-      magic-string: 0.26.7
-      unplugin: 0.10.1
     devDependencies:
       '@sxzz/eslint-config': 2.4.4_eslint@8.26.0
       '@types/node': 18.7.6
       bumpp: 8.2.1
       eslint: 8.26.0
       eslint-define-config: 1.8.0
-      fast-glob: 3.2.12
-      prettier: 2.7.1
       tsup: 6.3.0_typescript@4.8.4
       tsx: 3.11.0
       typescript: 4.8.4
-      vite: 3.1.8
       vitest: 0.24.3
 
   packages/basic-progress:
