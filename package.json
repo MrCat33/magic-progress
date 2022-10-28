@@ -8,7 +8,7 @@
   "scripts": {
     "build": "pnpm run -r build",
     "test": "vitest",
-    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json,.mdv --max warnings 0",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json,.mdv --max-warnings 0",
     "release": "bumpp"
   },
   "devDependencies": {
