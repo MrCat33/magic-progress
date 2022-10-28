@@ -11,14 +11,14 @@ describe('Vue', () => {
       onlyFiles: true,
     })
 
-    const transfrom = (code:string) => {
+    const transform = (code:string)=>{
       return code
     }
 
     for (const file of files) {
       it(file.replace(/\\/g, '/'), async () => {
         const filepath = resolve(root, file)
-        const code = transfrom(await readFile(filepath,'utf-8'))
+        const code = transform(await readFile(filepath,'utf-8'))
         expect(code).toMatchSnapshot()
       })
     }

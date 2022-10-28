@@ -1,0 +1,12 @@
+// Vitest Snapshot v1
+
+exports[`Vue > fixtures > tests/fixtures/basic.vue 1`] = `
+"<script setup lang=\\"ts\\">
+   console.log('test util')
+</script>
+
+<template>
+  hello world
+</template>
+"
+`;
