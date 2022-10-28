@@ -53,7 +53,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup && tsx scripts/postbuild.mts",
+    "build": "tsup && tsx ../../scripts/postbuild.mts",
     "dev": "tsup --watch",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json,.md",
     "lint:fix": "pnpm run lint --fix",
