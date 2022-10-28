@@ -1,0 +1,94 @@
+{
+  "name": "magic-progress",
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.14.0",
+  "description": "Monorepo for Vue progress",
+  "keywords": [
+    "vue"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/MrCat33/magic-progress#readme",
+  "bugs": {
+    "url": "https://github.com/MrCat33/magic-progress/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrCat33/magic-progress.git"
+  },
+  "author": "mrcat33",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./*": "./*",
+    "./cores": {
+      "import": "./dist/cores.mjs",
+      "require": "./dist/cores.js"
+    },
+    "./esbuild": {
+      "import": "./dist/esbuild.mjs",
+      "require": "./dist/esbuild.js"
+    },
+    "./rollup": {
+      "import": "./dist/rollup.mjs",
+      "require": "./dist/rollup.js"
+    },
+    "./vite": {
+      "import": "./dist/vite.mjs",
+      "require": "./dist/vite.js"
+    },
+    "./webpack": {
+      "import": "./dist/webpack.mjs",
+      "require": "./dist/webpack.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup && tsx scripts/postbuild.mts",
+    "dev": "tsup --watch",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json,.md",
+    "lint:fix": "pnpm run lint --fix",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp && pnpm publish",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^5.0.2",
+    "magic-string": "^0.26.7",
+    "unplugin": "^0.10.1"
+  },
+  "devDependencies": {
+    "@sxzz/eslint-config": "^2.4.4",
+    "@types/node": "*",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.26.0",
+    "eslint-define-config": "^1.8.0",
+    "fast-glob": "^3.2.12",
+    "prettier": "^2.7.1",
+    "tsup": "^6.3.0",
+    "tsx": "^3.11.0",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8",
+    "vitest": "^0.24.3"
+  },
+  "engines": {
+    "node": ">=14.19.0"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  }
+}
